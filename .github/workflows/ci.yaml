@@ -23,6 +23,8 @@ jobs:
           SKIP: check-untracked
   release:
     runs-on: ubuntu-latest
+    needs: [lint]
+
     if: github.ref == 'refs/heads/main'
 
     permissions:
