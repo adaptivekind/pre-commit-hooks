@@ -33,7 +33,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="Warn, don't fail.",
     )
     args = parser.parse_args(argv)
-    print(args.filenames)
 
     return check_untracked_files(
         filenames=args.filenames,
