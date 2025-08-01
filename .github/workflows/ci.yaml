@@ -20,7 +20,7 @@ jobs:
       - name: Run pre-commit on all files
         run: pre-commit run --all-files
         env:
-          SKIP: check-untracked
+          SKIP: check-untracked-files
   release:
     runs-on: ubuntu-latest
     needs: [lint]
@@ -33,6 +33,13 @@ jobs:
     steps:
       - name: Setup | Checkout Repository on Release Branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Setup | Force release branch to be at workflow sha
+        run: |
+          git reset --hard ${{ github.sha }}
 
       - name: Action | Semantic Version Release
         id: release
