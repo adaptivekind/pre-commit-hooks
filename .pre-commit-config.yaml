@@ -14,3 +14,4 @@ repos:
         name: check-untracked-files
         entry: check-untracked-files
         language: python
+        pass_filenames: false
