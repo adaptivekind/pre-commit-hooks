@@ -2,6 +2,15 @@
 
 <!-- version list -->
 
+## v0.0.3 (2025-08-01)
+
+### Bug Fixes
+
+- Don't pass filenames into check untracked files hook
+  ([#2](https://github.com/adaptivekind/pre-commit-hooks/pull/2),
+  [`7f7d16d`](https://github.com/adaptivekind/pre-commit-hooks/commit/7f7d16dab8392d3c6ef9ae83f0a03166c3474581))
+
+
 ## v0.0.2 (2025-08-01)
 
 ### Bug Fixes
